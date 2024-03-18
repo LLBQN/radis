@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--这段代码表示该项目使用了SpringBoot框架，并且将其版本锁定在2.7.8，同时使用了
+    spring-boot-starter-parent作为parent。通过使用spring-boot-starter-parent作为parent，
+    可以继承SpringBoot项目的默认设置和依赖管理，简化项目配置和管理-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.8</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.llbqn</groupId>
+    <artifactId>springdataredis_demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!--这是一个Maven项目的构建配置文件，指定了要使用的插件和插件的版本。
+    在这个示例中，使用的是SpringBoot Maven插件来构建SpringBoot项目，版本号为2.7.8。
+    这个配置文件会告诉Maven在构建项目时使用这个插件。插件的作用包括打包项目、运行单元测试、启动应用程序等。-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.7.8</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
