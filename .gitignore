@@ -1,0 +1,19 @@
+# Project exclude paths
+target/
+.git
+logs
+*.class
+.idea
+*.iml
+.project
+.settings
+.classpath
+!.mvn/wrapper/maven-wrapper.jar
+.springBeans
+build/
+nbproject/private/
+dist/
+nbbuild/
+nbdist/
+.nb-gradle/
+generatorConfig.xml
